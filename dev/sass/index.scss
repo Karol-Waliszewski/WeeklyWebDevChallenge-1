@@ -1,0 +1,251 @@
+@import 'Mixins';
+@font-face {
+    font-family: 'TitilliumText22L';
+    font-style: normal;
+    font-weight: 300;
+    src: local('TitilliumText22L-Regular'), url('../fonts/TitilliumText22L003.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'TitilliumText22L';
+    font-style: normal;
+    font-weight: 500;
+    src: local('TitilliumText22L-Medium'), url('../fonts/TitilliumText22L004.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'TitilliumText22L';
+    font-style: normal;
+    font-weight: 700;
+    src: local('TitilliumText22L-Bold'), url('../fonts/TitilliumText22L005.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f53242;
+    padding-top: 55px;
+}
+
+.container {
+    width: 1050px;
+    @include centerMargin();
+}
+
+.outer {
+    width: 420px;
+    @include e('header') {
+        width: 100%;
+        margin-bottom: 18px;
+        margin-top: 37px;
+        font-family: TitilliumText22L;
+        color: #ffffff;
+        font-size: 32px;
+        font-weight: 500;
+        text-align: center;
+        text-shadow: 1px 2px 2px rgba(43, 1, 0, 0.75);
+    }
+}
+
+.inner {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.23);
+    width: 100%;
+    height: auto;
+    padding: {
+        top: 20px;
+        bottom: 19px;
+    }
+}
+
+.form {
+    border-radius: 3px;
+    background-color: #f4f4f4;
+    box-shadow: 0px 0px 8.6px 1.4px rgba(0, 0, 0, 0.13);
+    width: 382px;
+    height: auto;
+    margin: {
+        left: 18px;
+        right: 20px;
+    }
+    padding: {
+        top: 22px;
+        bottom: 18px;
+    }
+    @include e('field') {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #c6c6c6;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        box-shadow: 1px 2px 0px 0px #ffffff;
+        margin: {
+            left: 23px;
+            right: 21px;
+            bottom: 22px;
+        }
+        width: 338px;
+        height: 39px;
+        position: relative;
+        @include m('checkbox') {
+            height: 24px;
+        }
+        @include m('tinyMargin') {
+            margin-bottom: 13px;
+        }
+        @include m('borderless') {
+            border: none;
+        }
+        @include m('buttons') {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    @include e('input') {
+        border: none;
+        background: none;
+        padding-left: 81px;
+        width: 100%;
+        height: 100%;
+        font-family: TitilliumText22L;
+        color: #afafaf;
+        font-size: 16px;
+        font-weight: 300;
+        &::placeholder {
+            color: #afafaf;
+        }
+        @include m('select') {
+            padding-right: 15px;
+        }
+    }
+    @include e('icon') {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 39px;
+        width: 58px;
+        @include centerFlex();
+        &::after {
+            position: absolute;
+            content: '';
+            background-color: #dedede;
+            width: 1px;
+            height: 32px;
+            top: 3px;
+            right: -2px;
+        }
+    }
+    @include e('label') {
+        font-family: TitilliumText22L;
+        color: #afafaf;
+        font-size: 17px;
+        font-weight: 300;
+        @include centerFlex();
+        align-items: flex-start;
+        height: 100%;
+        padding-left: 14px;
+        display: inline-block;
+    }
+    @include e('textarea') {
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #c6c6c6;
+        background-color: #f8f8f8;
+        margin: {
+            left: 23px;
+            right: 21px;
+            bottom: 22px;
+        }
+        width: 338px;
+        height: 230px;
+        font-family: TitilliumText22L;
+        color: #afafaf;
+        font-size: 16px;
+        font-weight: 300;
+        padding: 14px 15px;
+        resize: none;
+        &::placeholder {
+            color: inherit
+        }
+    }
+    @include e('btn') {
+        cursor: pointer;
+        width: 149px;
+        flex-basis: 149px;
+        height: 41px;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #3b9a00;
+        background-color: #93d02b;
+        font-family: TitilliumText22L;
+        font-size: 18px;
+        font-weight: 500;
+        color: #ffffff;
+        text-shadow: 1px 1px 0px #51850e;
+        text-align: center;
+        margin: {
+            bottom: 20px;
+        }
+        @include m('big') {
+            font-size: 24px;
+            margin: {
+                left: 23px;
+                right: 21px;
+                bottom: 18px;
+            }
+            width: 338px;
+            height: 48px;
+        }
+        @include m('disable') {
+            background-color: #bcdb97;
+            cursor: not-allowed;
+        }
+        @include m('reject') {
+            border-color: #a2202a;
+            background-color: #f4495b;
+            text-shadow: 1px 1px 0px #f4495b;
+        }
+        @include m('inline') {
+            display: inline-block;
+            float: right;
+        }
+    }
+    @include e('checkbox') {
+        width: 23px;
+        height: 24px;
+        display: inline-block;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #c6c6c6;
+        float: left;
+        cursor: pointer;
+        @include centerFlex();
+        @include m('hidden') {
+            visibility: hidden;
+            position: absolute;
+            top: -200px;
+            &:checked+.form__checkbox {
+                &:after {
+                    background-color: #88c814;
+                }
+            }
+        }
+        &:after {
+            content: '';
+            display: block;
+            width: 13px;
+            height: 14px;
+            border-radius: 3px;
+        }
+    }
+    @include e('option') {
+        padding: 0 5px; //TODO: REPAIR
+    }
+}

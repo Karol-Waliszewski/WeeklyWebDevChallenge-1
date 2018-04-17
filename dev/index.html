@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly WebDev Challenge 1</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <main class="container">
+
+
+        <section class="outer" id="register">
+
+            <h1 class="outer__header">Register Form</h1>
+
+            <div class="inner">
+                <form action="" class="form form--register">
+
+                    <div class="form__field">
+
+                        <label for="username--r" class="form__icon">
+                            <img src="img/user-icon.png" alt="person's head">
+                        </label>
+
+                        <input type="text" placeholder="Username" id="username--r" class="form__input">
+
+                    </div>
+
+                    <div class="form__field">
+
+                        <label for="password--r" class="form__icon">
+                            <img src="img/password-icon.png" alt="lock"> 
+                        </label>
+
+                        <input type="text" placeholder="Password" id="password--r" class="form__input">
+
+                    </div>
+
+                    <div class="form__field">
+
+                        <label for="confirmPass--r" class="form__icon">
+                            <img src="img/password-icon.png" alt="lock">
+                        </label>
+
+                        <input type="text" placeholder="Confirm Password" id="confirmPass--r" class="form__input">
+
+                    </div>
+
+
+                    <div class="form__field">
+
+                        <label for="email--r" class="form__icon">
+                            <img src="img/email-icon.png" alt="letter"> 
+                        </label>
+
+                        <input type="text" placeholder="Email" id="email--r" class="form__input">
+
+                    </div>
+
+                    <div class="form__field form__field--tinyMargin">
+
+                        <label for="location--r" class="form__icon">
+                            <img src="img/location-icon.png" alt="location marker"> 
+                        </label>
+
+                        <select id="location--r" class="form__input form__input--select">
+                            <option selected hidden disabled>Your Location</option>
+                            <option class="form__option">Warsaw</option>
+                            <option class="form__option">Paris</option>
+                            <option class="form__option">Berlin</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form__field form__field--checkbox form__field--tinyMargin form__field--borderless">
+                        <input type="checkbox" id="checkbox--r" class="form__checkbox--hidden">
+                        <label for="checkbox--r" class="form__checkbox"></label>
+                        <label for="checkbox--r" class="form__label">I have read and accept the terms of use.</label>
+                    </div>
+
+                    <input type="submit" class="form__btn form__btn--big" value="Sign up">
+                </form>
+            </div>
+        </section>
+
+        <section class="outer" id="signin">
+
+            <h1 class="outer__header">Sign in Form</h1>
+
+            <div class="inner">
+                <form action="" class="form form--signin">
+
+                    <div class="form__field">
+
+                        <label for="username--s" class="form__icon">
+                            <img src="img/user-icon.png" alt="person's head">
+                        </label>
+
+                        <input type="text" placeholder="Username" id="username--s" class="form__input">
+
+                    </div>
+
+                    <div class="form__field">
+
+                        <label for="password--s" class="form__icon">
+                            <img src="img/password-icon.png" alt="lock"> 
+                        </label>
+
+                        <input type="text" placeholder="Password" id="password--s" class="form__input">
+
+                    </div>
+
+                    <div class="form__field form__field--checkbox form__field--tinyMargin form__field--borderless">
+
+                        <input type="checkbox" id="checkbox--s" class="form__checkbox--hidden">
+                        <label for="checkbox--s" class="form__checkbox"></label>
+                        <label for="checkbox--s" class="form__label">Remember Me</label>
+
+                        <input type="submit" class="form__btn form__btn--inline" value="Sign in">
+
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+
+        <section class="outer" id="email">
+
+            <h1 class="outer__header">Send Email</h1>
+
+            <div class="inner">
+                <form action="" class="form form--email">
+
+                    <div class="form__field">
+
+                        <label for="username--e" class="form__icon">
+                            <img src="img/user-icon.png" alt="person's head">
+                        </label>
+
+                        <input type="text" placeholder="Username" id="username--e" class="form__input">
+
+                    </div>
+
+                    <div class="form__field">
+
+                        <label for="email--e" class="form__icon">
+                            <img src="img/email-icon.png" alt="letter"> 
+                        </label>
+
+                        <input type="text" placeholder="Email" id="email--e" class="form__input">
+
+                    </div>
+
+
+                    <textarea name="textarea--e" class="form__textarea" placeholder="Type your message..."></textarea>
+
+
+                    <div class="form__field form__field--checkbox form__field--tinyMargin form__field--borderless">
+
+                        <input type="checkbox" id="checkbox--e" class="form__checkbox--hidden">
+                        <label for="checkbox--e" class="form__checkbox"></label>
+                        <label for="checkbox--e" class="form__label">Send a copy to my Email</label>
+
+                    </div>
+
+                    <input type="submit" class="form__btn form__btn--big" value="Send Email">
+
+                </form>
+
+            </div>
+        </section>
+
+        <section class="outer" id="recover">
+
+            <h1 class="outer__header">Recover</h1>
+
+            <div class="inner">
+                <form action="" class="form form--recover">
+
+                    <div class="form__field">
+
+                        <label for="email--re" class="form__icon">
+                            <img src="img/email-icon.png" alt="letter"> 
+                        </label>
+
+                        <input type="text" placeholder="Enter your Email" id="email--re" class="form__input">
+
+                    </div>
+
+                    <div class="form__field">
+
+                        <label for="phone--re" class="form__icon">
+                            <img src="img/phone-icon.png" alt="phone"> 
+                        </label>
+
+                        <input type="text" placeholder="Enter your Phone number" id="phone--re" class="form__input">
+
+                    </div>
+
+                    <div class="form__field form__field--borderless form__field--buttons">
+                        <input type="submit" class="form__btn form__btn" value="Send">
+                        <button class="form__btn form__btn form__btn--disable">Done</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="outer" id="subscribe">
+
+            <h1 class="outer__header">Subscribe</h1>
+
+            <div class="inner">
+                <form action="" class="form form--subscribe">
+                    <div class="form__field">
+
+                        <label for="email--su" class="form__icon">
+                            <img src="img/email-icon.png" alt="letter"> 
+                        </label>
+
+                        <input type="text" placeholder="Enter your Email" id="email--su" class="form__input">
+
+                    </div>
+                    <div class="form__field form__field--borderless form__field--buttons">
+                        <input type="submit" class="form__btn form__btn" value="Subscribe">
+                        <button class="form__btn form__btn form__btn--reject">No, Thanks</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
